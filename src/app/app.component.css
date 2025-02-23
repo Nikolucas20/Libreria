@@ -1,0 +1,105 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 28px;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  .generos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+
+  }
+  
+  .cuadro {
+    border: 2px solid #6c757d;
+    padding: 15px 25px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #343a40;
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cuadro:hover {
+    background-color: #6c757d;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  .detalles {
+    border-top: 3px solid #6c757d;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  
+  .botones {
+    margin-bottom: 20px;
+  }
+  
+  .botones button {
+    margin: 0 10px;
+    padding: 12px 20px;
+    background-color: #979a9a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .botones button:nth-child(2) {
+    background-color: #979a9a;
+  }
+  
+  .botones button:nth-child(3) {
+    background-color: #979a9a;
+  }
+  
+  .botones button:hover {
+    filter: brightness(85%);
+    transform: scale(1.05);
+  }
+  
+  .libros-lista {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .libro-item {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .libro-item:hover {
+    transform: translateY(-5px);
+  }
+  
