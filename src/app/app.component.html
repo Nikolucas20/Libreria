@@ -1,20 +1,40 @@
-<div class="container">
-  <h1>Biblioteca</h1>
-  <div class="generos">
-    <h2>Géneros</h2>
-    <button (click)="agregarLibro()">Agregar Libro</button>
-  </div>
-
+<div class="main-container">
+  <div class="container">
+    <h1>Biblioteca</h1>
     
-   
+    <div class="add-book-section">
+      <button (click)="agregarLibro()" class="add-button">
+        <i class="fas fa-plus"></i> Agregar Libro
+      </button>
+    </div>
 
+    <div class="generos">
+      <h2>Géneros</h2>
+      <div class="generos-grid">
+        <div *ngFor="let genero of generosUnicos()" class="genero-cuadro" (click)="filtrarPorGenero(genero)">
+          {{ genero }}
+          <span class="libro-count">({{ contarLibrosPorGenero(genero) }})</span>
+        </div>
+      </div>
+    </div>
+    
     <ul class="libros-lista">
-      <li *ngFor="let libro of data" class="libro-item">
-        <strong>Título:</strong> {{ libro.nombre }} <br>
-        <strong>Autor:</strong> {{ libro.autor }} <br>
-        <strong>Lenguaje:</strong> {{ libro.lenguaje }} <br>
-        <strong>Genero:</strong> {{ libro.genero }} <br>
-        <button (click)="eliminarLibro(libro)">Eliminar</button><button (click)="actualizarLibro(libro)">Actualizar</button>
+      <li *ngFor="let libro of librosFiltrados" class="libro-item">
+        <div class="libro-content">
+          <strong>Título:</strong> {{ libro.nombre }} <br>
+          <strong>Autor:</strong> {{ libro.autor }} <br>
+          <strong>Lenguaje:</strong> {{ libro.lenguaje }} <br>
+          <strong>Género:</strong> {{ libro.genero }}
+        </div>
+        <div class="libro-buttons">
+          <button class="update-button" (click)="actualizarLibro(libro)">
+            <i class="fas fa-edit"></i> Actualizar
+          </button>
+          <button class="delete-button" (click)="eliminarLibro(libro)">
+            <i class="fas fa-trash"></i> Eliminar
+          </button>
+        </div>
       </li>
     </ul>
   </div>
+</div>
